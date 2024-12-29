@@ -80,6 +80,7 @@ Sample files are provided at the link below. Please download and extract them fo
 
 ### markers.jsonのフォーマット
 以下の要素を持つ連想配列の配列。
+
 | フィールド名           | 型      | 必須 | 説明                                           | 制約              |
 |------------------------|---------|------|------------------------------------------------|-------------------|
 | `modelURI`            | string  | はい | 3DモデルのURL                                  | 有効なURLであること |
