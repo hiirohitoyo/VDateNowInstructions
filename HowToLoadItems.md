@@ -101,7 +101,7 @@ Sample files are provided at the link below. Please download and extract them fo
 
 ### 参考ファイル
 以下に参考ファイルを配置したので、ダウンロード＆解凍して使ってください。
-https://hiirohitoyo.github.io/VDateNowInstructions/ItemMarkerSample.zip
+[https://hiirohitoyo.github.io/VDateNowInstructions/ItemMarkerSample.zip](https://hiirohitoyo.github.io/VDateNowInstructions/ItemMarkerSample.zip)
 
 ## アイテムの消去方法
 - 出現させたアイテムを消す機能は現在未実装です。  
