@@ -32,7 +32,7 @@ An array of associative arrays containing the following elements:
 | Field Name           | Type    | Required | Description                                       | Constraints         |
 |----------------------|---------|----------|---------------------------------------------------|---------------------|
 | `modelURI`          | string  | Yes      | URL of the 3D model                               | Must be a valid URL |
-| `markerURI`         | string  | Yes      | File name of the marker image (`file:/[filename]`) | Must be a valid filename |
+| `markerURI`         | string  | Yes      | File name or URL of the marker image (`file:/[filename]`, `https://[URL]`) | Must be a valid filename or URL |
 | `physicalWidthSize` | number  | Yes      | Physical width of the marker image (unit: meters) | Must be greater than 0 |
 
 Example:
@@ -49,6 +49,16 @@ Example:
 ### Reference Files
 Sample files are provided at the link below. Please download and extract them for use:  
 [https://hiirohitoyo.github.io/VDateNowInstructions/ItemMarkerSample.zip](https://hiirohitoyo.github.io/VDateNowInstructions/ItemMarkerSample.zip)
+
+## How to Load Items - Method 3 (Version 2.9.0 and Later)
+Instead of preparing a `markers.json` file, you can now load items directly within the app using the following steps.  
+When loaded this way, the settings are not saved and are only valid while the app is running.
+
+1. Press the "Load Item Marker" button at the bottom of the model selection screen.  
+   ![](LoadItemButton.jpg)
+2. On the "Load Item" screen, enter the URL of the model file, the URL of the marker file, and the physical width of the marker image (in mm).  
+   ![](LoadItemPopup.jpg)
+3. Press the "Load Marker" button.
 
 ## 日本語
 ## アイテムのロード方法 その１
@@ -84,8 +94,8 @@ Sample files are provided at the link below. Please download and extract them fo
 | フィールド名           | 型      | 必須 | 説明                                           | 制約              |
 |------------------------|---------|------|------------------------------------------------|-------------------|
 | `modelURI`            | string  | はい | 3DモデルのURL                                  | 有効なURLであること |
-| `markerURI`           | string  | はい | マーカー画像のファイル名（file:/[ファイル名]）                        | 有効なファイル名であること |
-| `physicalWidthSize`   | number  | はい | マーカー画像の物理幅（単位：メートル）             | 0より大きな値         |
+| `markerURI`           | string  | はい | マーカー画像のファイル名もしくはURL（`file:/[ファイル名]`, `https://[URL]`）                        | 有効なファイル名もしくはURLであること |
+| `physicalWidthSize`   | number  | はい | マーカー画像の物理幅（メートル単位）             | 0より大きな値         |
 
 
 例：
@@ -108,4 +118,14 @@ Sample files are provided at the link below. Please download and extract them fo
 申し訳ないですが、アプリの再起動をお願いいたします。
 
 ## 読み込み対応3Dモデルの作成方法
-- マテリアルとしてMTOONを使い、UniVRMのExportGLB機能を使ってエクスポートします。（詳細は後日追記します）
+- マテリアルとしてMTOONを使い、UniVRMのExportGLB機能を使ってエクスポートします。
+
+## アイテムのロード方法 その３（ver2.9.0以降）
+markers.jsonを用意する代わりに、以下の手順でアプリ上で読み込むことが可能です。  
+この方法で読み込んだ場合、設定は保存されず、アプリの動作中のみ有効です。
+
+1. モデル選択画面最下部の「Load Item Marker」ボタン押下する  
+   ![](LoadItemButton.jpg)
+2. Load Item 画面でモデルファイルのURL、マーカーファイルのURL、マーカー画像の物理幅（mm単位）を入力する  
+   ![](LoadItemPopup.jpg)
+3. Load Markerボタンを押下する
