@@ -31,7 +31,7 @@ An array of associative arrays containing the following elements:
 
 | Field Name           | Type    | Required | Description                                       | Constraints         |
 |----------------------|---------|----------|---------------------------------------------------|---------------------|
-| `modelURI`          | string  | Yes      | URL of the 3D model                               | Must be a valid URL |
+| `modelURI`          | string  | Yes      | File name or URL of the 3D model (`file:/[filename]`, `https://[URL]`)                               | Must be a valid filename or URL　(filename is available in ver. 2.10.1 and later) |
 | `markerURI`         | string  | Yes      | File name or URL of the marker image (`file:/[filename]`, `https://[URL]`) | Must be a valid filename or URL |
 | `physicalWidthSize` | number  | Yes      | Physical width of the marker image (unit: meters) | Must be greater than 0 |
 
@@ -57,6 +57,7 @@ When loaded this way, the settings are not saved and are only valid while the ap
 1. Press the "Load Item Marker" button at the bottom of the model selection screen.  
    ![](LoadItemButton.jpg)
 2. On the "Load Item" screen, enter the URL of the model file, the URL of the marker file, and the physical width of the marker image (in mm).  
+   (From ver. 2.10.1 and later) You can also specify a local file URI instead of a URL (selectable via the Select from File button).  
    ![](LoadItemPopup.jpg)
 3. Press the "Load Marker" button.
 
@@ -93,7 +94,7 @@ When loaded this way, the settings are not saved and are only valid while the ap
 
 | フィールド名           | 型      | 必須 | 説明                                           | 制約              |
 |------------------------|---------|------|------------------------------------------------|-------------------|
-| `modelURI`            | string  | はい | 3DモデルのURL                                  | 有効なURLであること |
+| `modelURI`            | string  | はい | 3Dモデルのファイル名もしくはURL（`file:/[ファイル名]`, `https://[URL]`）                                  | 有効なファイル名もしくはURLであること（ファイル指定はver2.10.1以降で可能） |
 | `markerURI`           | string  | はい | マーカー画像のファイル名もしくはURL（`file:/[ファイル名]`, `https://[URL]`）                        | 有効なファイル名もしくはURLであること |
 | `physicalWidthSize`   | number  | はい | マーカー画像の物理幅（メートル単位）             | 0より大きな値         |
 
@@ -127,5 +128,6 @@ markers.jsonを用意する代わりに、以下の手順でアプリ上で読�
 1. モデル選択画面最下部の「Load Item Marker」ボタン押下する  
    ![](LoadItemButton.jpg)
 2. Load Item 画面でモデルファイルのURL、マーカーファイルのURL、マーカー画像の物理幅（mm単位）を入力する  
+   （ver2.10.1以降） URLの代わりにローカルファイルのURIも指定できます（Select from Fileボタンから選択可能です）  
    ![](LoadItemPopup.jpg)
 3. Load Markerボタンを押下する
